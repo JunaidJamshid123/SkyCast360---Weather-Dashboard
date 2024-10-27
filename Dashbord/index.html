@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Weather Dashboard Sidebar</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../Images/logo.png" alt="Weather Logo">
+            </div>
+            <ul class="nav">
+                <li><a href="#"><img src="../Images/home.png" alt="Home Icon" class="icon"> Home</a></li>
+                <li><a href="#"><img src="../Images/Forcast.png" alt="Forecast Icon" class="icon"> Forecast</a></li>
+                <li><a href="../Chatbot/index.html"><img src="../Images/chatbot.png" alt="Chatbot Icon" class="icon"> Chatbot</a></li>
+                <li><a href="../Dashbord/index.html"><img src="../Images/analytics.png" alt="Analytics Icon" class="icon"> Analytics</a>
+                </li>
+                <li><a href="#"><img src="../Images/Notification.png" alt="Notifications Icon" class="icon">
+                        Notifications</a></li>
+                <li><a href="#"><img src="../Images/settings.png" alt="Settings Icon" class="icon"> Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="content-section">
+            <div class="top-section">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search here...">
+                    <img src="../Images/search.png" class="search-icon" alt="Search Icon">
+                </div>
+                <div class="icon-container">
+                    <img src="../Images/notification.png" class="notification-icon" alt="Notifications Icon">
+                    <img src="../Images/profile.png" class="profile-icon" alt="Profile Icon">
+                </div>
+            </div>
+
+            <div class="weather-card">
+                <div class="location-info">
+                    <p class="current-location">Current Location</p>
+                    <h2 class="location-name">Los Angeles, CA, USA</h2>
+                </div>
+                <div class="weather-info">
+                    <div class="temperature-section">
+                        <div class="weather-icon">
+                            <img src="../Images/sun.png" alt="Weather Icon">
+                        </div>
+                        <span class="temperature">12°C</span>
+                    </div>
+                    <div class="details-section">
+                        <p class="time">Monday, 07:43 AM</p>
+                        <p class="weather-condition"><img src="../Images/cloudy.png" alt="Partly Cloudy Icon"> Partly
+                            Cloudy</p>
+                            <p class="weather-condition"><img src="../Images/drop.png" alt="Partly Cloudy Icon">Humidity:30%</p>
+                            <p class="weather-condition"><img src="../Images/windy.png" alt="Partly Cloudy Icon">wind speed:317km/hr</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Forecast Section -->
+            <div class="forecast-section">
+                <h3 class="forecast-title">5-Day Weather Forecast</h3>
+                <div class="forecast-cards">
+                    <div class="forecast-card">
+                        <div class="day">Monday</div>
+                        <div class="weather-icon">
+                            <img src="../Images/sun.png" alt="Sunny Icon">
+                        </div>
+                        <div class="condition">Sunny</div>
+                        <div class="temperature">22°C / 71.6°F</div>
+                    </div>
+                    <div class="forecast-card">
+                        <div class="day">Tuesday</div>
+                        <div class="weather-icon">
+                            <img src="../Images/cloudy.png" alt="Rainy Icon">
+                        </div>
+                        <div class="condition">Rainy</div>
+                        <div class="temperature">22°C / 71.6°F</div>
+                    </div>
+                    <div class="forecast-card">
+                        <div class="day">Wednesday</div>
+                        <div class="weather-icon">
+                            <img src="../Images/sun.png" alt="Rainy Icon">
+                        </div>
+                        <div class="condition">Rainy</div>
+                        <div class="temperature">22°C / 71.6°F</div>
+                    </div>
+                    <div class="forecast-card">
+                        <div class="day">Thursday</div>
+                        <div class="weather-icon">
+                            <img src="../Images/sun.png" alt="Sunny Icon">
+                        </div>
+                        <div class="condition">Sunny</div>
+                        <div class="temperature">22°C / 71.6°F</div>
+                    </div>
+                    <div class="forecast-card">
+                        <div class="day">Friday</div>
+                        <div class="weather-icon">
+                            <img src="../Images/sun.png" alt="Stormy Icon">
+                        </div>
+                        <div class="condition">Stormy</div>
+                        <div class="temperature">22°C / 71.6°F</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

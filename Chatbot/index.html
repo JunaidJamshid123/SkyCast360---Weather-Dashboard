@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Chatbot</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../Images/logo.png" alt="Weather Logo">
+            </div>
+            <ul class="nav">
+                <li><a href="#"><img src="../Images/home.png" alt="Home Icon" class="icon"> Home</a></li>
+                <li><a href="#"><img src="../Images/Forcast.png" alt="Forecast Icon" class="icon"> Forecast</a></li>
+                <li><a href="../Chatbot/index.html"><img src="../Images/chatbot.png" alt="Chatbot Icon" class="icon">
+                        Chatbot</a></li>
+                <li><a href="../Dashbord/index.html"><img src="../Images/analytics.png" alt="Analytics Icon"
+                            class="icon"> Analytics</a></li>
+                <li><a href="#"><img src="../Images/Notification.png" alt="Notifications Icon" class="icon">
+                        Notifications</a></li>
+                <li><a href="#"><img src="../Images/settings.png" alt="Settings Icon" class="icon"> Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="content-section">
+            <div class="top-section">
+                <div class="search-container">
+                <input type="text" class="search-bar" id="cityInput" placeholder="Search here...">
+                <img src="../Images/search.png" class="search-icon" alt="Search Icon">
+                </div>
+                <div class="icon-container">
+                    <img src="../Images/notification.png" class="notification-icon" alt="Notifications Icon">
+                    <img src="../Images/profile.png" class="profile-icon" alt="Profile Icon">
+                </div>
+            </div>
+
+        <!-- Location Card -->
+        <div class="location-card">
+            <div class="location-title">Current Location</div>
+            <div class="location-name" id="location-name">City, Country</div>
+            <br>
+            <div class="location-weather">
+                <span class="temperature" id="temperature">29°C</span>
+            </div>
+        </div>
+
+
+            <div class="chatbot-icon">
+                <img src="../Images/chatbot_icon.png" alt="Chatbot Icon">
+            </div>
+
+            <!-- Chatbot Container -->
+            <div class="chatbot-container">
+                <div class="chatbot-header">Chatbot</div>
+                <div class="chatbot-body">
+                    <div class="message bot-message">Hi! How can I help you today?</div>
+                </div>
+                <div class="chatbot-footer">
+                    <input type="text" class="chatbot-input" placeholder="Type your message...">
+                    <button class="chatbot-send">Send</button>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart">
+                    <h4>Vertical Bar Chart</h4>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart">
+                    <h4>Doughnut Chart</h4>
+                    <canvas id="chart2"></canvas>
+                </div>
+                <div class="chart">
+                    <h4>Line Chart</h4>
+                    <canvas id="chart3"></canvas>
+                </div>
+            </div>
+
+
+
+
+            <!-- Weather Forecast Table -->
+            <div class="forecast-section">
+                <h4 style="margin-left: 40%;">5-Day Weather Forecast</h4>
+                <table id="forecastTable" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Temperature (°C)</th>
+                            <th>Humidity (%)</th>
+                            <th>Weather Condition</th>
+                            <th>Wind Speed (m/s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be dynamically added here -->
+                    </tbody>
+                </table>
+            
+                <!-- Buttons for interactions -->
+                <div class="table-buttons">
+                    <button id="sortAsc">Sort Temp Ascending</button>
+                    <button id="sortDesc">Sort Temp Descending</button>
+                    <button id="filterRain">Filter Rainy Days</button>
+                    <button id="highestTemp">Show Highest Temp</button>
+                </div>
+            </div>
+
+
+           
+
+           
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
